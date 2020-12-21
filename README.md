@@ -10,12 +10,12 @@ In this work, the neural networks are trained with Hamiltonians belonging to the
 
 + **Training with random polynomial potentials**: In this case, the training data consists of a set of random Hamiltonians with polynomial potentials of (up to) degree four. That is,
 
-<img src="https://render.githubusercontent.com/render/math?math=H(x) = \frac{p^2}{2m} \+ V(x), \quad V(x) = \alpha_0 \+ \alpha_1 x \+ \alpha_2 x^2 \+ \alpha_3 x^3 \+ \alpha_4 x^4">
+<img src="https://render.githubusercontent.com/render/math?math=H(x) = \frac{p^2}{2m} %2B V(x), \quad V(x) = \alpha_0 %2B \alpha_1 x %2B \alpha_2 x^2 %2B \alpha_3 x^3 %2B \alpha_4 x^4">
 
 
 and in two dimensions,
 
-<img src="https://render.githubusercontent.com/render/math?math=H(x,y) = \frac{p_x^2 + p_y^2}{2m} + V(x,y), \quad V(x,y) = \sum_{i+j\leq4} \alpha_{ij} x^i y^j"> 
+<img src="https://render.githubusercontent.com/render/math?math=H(x,y) = \frac{p_x^2 %2B p_y^2}{2m} + V(x,y), \quad V(x,y) = \sum_{i+j\leq4} \alpha_{ij} x^i y^j"> 
 
 <p align="center"><img src="https://github.com/laiadc/DL-schrodinger/blob/main/Images/example_pot1D.png"  align=middle width=600pt />
 </p>
@@ -37,12 +37,12 @@ where x is the distance between the atoms, xe is the equilibrium bond distance, 
 
 + **Training with Morse potentials**: Let H be the Hamiltonian whose eigenfunctions we want to find. Suppose that H can be written as
 
-<img src="https://render.githubusercontent.com/render/math?math=V(x) = H = H_0 + H_1">
+<img src="https://render.githubusercontent.com/render/math?math=H = H_0 %2B H_1">
 
 
 Where H0 is a Hamiltonian whose eigenstates are known. If H1 is small, then H0 is an approximation of H. The goal of this second part of the work is to see if a neural network trained with the Hamiltonian H0 can generalize and reproduce the wave functions of the Hamiltonian H. In this work we apply this framework to approximate the eigenstates of coupled Morse Hamiltonians: 
 
-<img src="https://render.githubusercontent.com/render/math?math=H(x_1, x_2, p_1, p_2) = \frac{1}{2}(G_{11}p_1^2 + G_{22}p_2^2) + G_{12}p_1p_2 + U_M(x_1) + U_M(x_2)">
+<img src="https://render.githubusercontent.com/render/math?math=H(x_1, x_2, p_1, p_2) = \frac{1}{2}(G_{11}p_1^2 %2B G_{22}p_2^2) %2B G_{12}p_1p_2 %2B U_M(x_1) %2B U_M(x_2)">
 
 This Hamiltonian models the stretching dynamics of the H2O molecule. It is expressed in terms of bond-angle coordinates, where xi are the OH extensions and pi their associated momentum. The training consits of decoupled Morse potentials, which act as an approximation of the coupled Morse potential.
 
