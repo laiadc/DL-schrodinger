@@ -17,7 +17,7 @@ and in two dimensions,
 
 <img src="https://render.githubusercontent.com/render/math?math=H(x,y) = \frac{p_x^2 + p_y^2}{2m} + V(x,y), \quad V(x,y) = \sum_{i+j\leq4} \alpha_{ij} x^i y^j"> 
 
-<p align="center"><img src="https://github.com/laiadc/DL-schrodinger/blob/main/Images/example_poit1D.png"  align=middle width=400pt />
+<p align="center"><img src="https://github.com/laiadc/DL-schrodinger/blob/main/Images/example_pot1D.png"  align=middle width=400pt />
 </p>
 <p align="center">
 <em>Three examples of random polynomial potentials (left) and their associated eigen functions for the fundamental state (middle) and the 10th excited state (right). </em>
@@ -34,3 +34,14 @@ where x is the distance between the atoms, xe is the equilibrium bond distance, 
 <p align="center">
 <em>Three examples of random polynomial potentials (left) and their associated eigen functions for the fundamental state (middle) and the 10th excited state (right). Example of a Morse potential with and its eigen functions for the energy levels n=0,1,2,3. </em>
 </p>
+
++ **Training with Morse potentials**: Let H be the Hamiltonian whose eigenfunctions we want to find. Suppose that H can be written as
+
+<img src="https://render.githubusercontent.com/render/math?math=V(x) = H = H_0 + H_1">
+
+
+Where H0 is a Hamiltonian whose eigenstates are known. If H1 is small, then H0 is an approximation of H. The goal of this second part of the work is to see if a neural network trained with the Hamiltonian H0 can generalize and reproduce the wave functions of the Hamiltonian H. In this work we apply this framework to approximate the eigenstates of coupled Morse Hamiltonians: 
+
+<img src="https://render.githubusercontent.com/render/math?math=H(x_1, x_2, p_1, p_2) = \frac{1}{2}(G_{11}p_1^2 + G_{22}p_2^2) + G_{12}p_1p_2 + U_M(x_1) + U_M(x_2)">
+
+This Hamiltonian models the stretching dynamics of the H2O molecule. It is expressed in terms of bond-angle coordinates, where xi are the OH extensions and pi their associated momentum. The training consits of decoupled Morse potentials, which act as an approximation of the coupled Morse potential.
