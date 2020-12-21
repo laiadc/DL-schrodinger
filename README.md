@@ -10,23 +10,27 @@ In this work, the neural networks are trained with Hamiltonians belonging to the
 
 + **Training with random polynomial potentials**: In this case, the training data consists of a set of random Hamiltonians with polynomial potentials of (up to) degree four. That is,
 
-\begin{equation}
-H(x) = \frac{p^2}{2m} + V(x), \quad V(x) = \alpha_0 + \alpha_1 x + \alpha_2 x^2 + \alpha_3 x^3 + \alpha_4 x^4
-\label{eq:1}
-\end{equation}
+<img src="https://render.githubusercontent.com/render/math?math=H(x) = \frac{p^2}{2m} + V(x), \quad V(x) = \alpha_0 + \alpha_1 x + \alpha_2 x^2 + \alpha_3 x^3 + \alpha_4 x^4">
+
 
 and in two dimensions,
 
-\begin{equation}
-H(x,y) = \frac{p_x^2 + p_y^2}{2m} + V(x,y), \quad V(x,y) = \sum_{i+j\leq4} \alpha_{ij} x^i y^j 
-\label{eq:2}
-\end{equation}
+<img src="https://render.githubusercontent.com/render/math?math=H(x,y) = \frac{p_x^2 + p_y^2}{2m} + V(x,y), \quad V(x,y) = \sum_{i+j\leq4} \alpha_{ij} x^i y^j"> 
+
+<p align="center"><img src="https://github.com/laiadc/DL-schrodinger/blob/main/Images/example_poit1D.png"  align=middle width=400pt />
+</p>
+<p align="center">
+<em>Three examples of random polynomial potentials (left) and their associated eigen functions for the fundamental state (middle) and the 10th excited state (right). </em>
+</p>
 
 Once the network is trained, we ask the network to reproduce the wave functions of more general, non-polynomial potentials. In this work, we chose to test the network using Morse potentials, which model the potential energy of a diatomic molecule. The Morse potential can be written as
 
-\begin{equation}
-V(x) = D_e(e^{-2a(x-x_e)} - 2e^{-a(x-x_e)})
-\label{eq:4}
-\end{equation}   
+<img src="https://render.githubusercontent.com/render/math?math=V(x) = D_e(e^{-2a(x-x_e)} - 2e^{-a(x-x_e)})">
 
-where $x$ is the distance between the atoms, $x_{e}$ is the equilibrium bond distance, $D_{e}$ is the well depth (defined relative to the dissociated atoms), and $a$ controls the 'width' of the potential (the smaller $a$ is, the larger the well). 
+where x is the distance between the atoms, xe is the equilibrium bond distance, De is the well depth (defined relative to the dissociated atoms), and a controls the 'width' of the potential (the smaller a is, the larger the well). 
+
+<p align="center"><img src="https://github.com/laiadc/DL-schrodinger/blob/main/Images/morse_example.png"  align=middle width=400pt />
+</p>
+<p align="center">
+<em>Three examples of random polynomial potentials (left) and their associated eigen functions for the fundamental state (middle) and the 10th excited state (right). Example of a Morse potential with and its eigen functions for the energy levels n=0,1,2,3. </em>
+</p>
