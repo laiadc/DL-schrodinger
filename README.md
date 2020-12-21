@@ -10,7 +10,7 @@ In this work, the neural networks are trained with Hamiltonians belonging to the
 
 + **Training with random polynomial potentials**: In this case, the training data consists of a set of random Hamiltonians with polynomial potentials of (up to) degree four. That is,
 
-<img src="https://render.githubusercontent.com/render/math?math=H(x) = \frac{p^2}{2m} + V(x), \quad V(x) = \alpha_0 + \alpha_1 x + \alpha_2 x^2 + \alpha_3 x^3 + \alpha_4 x^4>
+<img src="https://render.githubusercontent.com/render/math?math=H(x) = \frac{p^2}{2m} + V(x), \quad V(x) = \alpha_0 + \alpha_1 x + \alpha_2 x^2 + \alpha_3 x^3 + \alpha_4 x^4">
 
 
 and in two dimensions,
