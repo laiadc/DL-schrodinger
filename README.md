@@ -2,7 +2,7 @@
 
 A deep learning approach to generate the fundamental and excited eigenfunctions of multiple Hamiltonians.
 
-This repostory contains the code used to reproduce the eigenstates of molecular potentials. The results are illustrated in a set of [Jupyter](https://jupyter.org/) notebooks. The whole code is the result of the work in <a href = https://arxiv.org/abs/2103.00202> this paper</a>. Any contribution or idea to continue the lines of the proposed work will be very welcome.
+This repostory contains the code used to reproduce the eigenstates of molecular potentials. The results are illustrated in a set of [Jupyter](https://jupyter.org/) notebooks. The whole code is the result of the work in <a href = https://arxiv.org/abs/2103.00202 target=_blank> this paper</a>. Any contribution or idea to continue the lines of the proposed work will be very welcome.
 
 **Remark**: We recommend the readers to view the notebooks in [Google Colaboratory](https://colab.research.google.com/) for nicer presentation and correct visualization of the figures. To open the notebooks in Google Colaboratory one can click on the links below, or use the button [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]() found in the first line of every notebook.
 
